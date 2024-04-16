@@ -1,17 +1,14 @@
 import './app.css'
-import axios from 'axios'
-
-const getMovieApi = () => {
-  axios.get(`https://santosnr6.github.io/Data/movies.json`)
-    .then(response => {
-      console.log(response.data)
-    })
-}
+import Topmovie from './components/topMovie/Topmovie'
 
 function App() {
-  getMovieApi()
   return (
-    <h1>App</h1>
+    <div className='app'>
+      < h1 > App</h1 >
+      <Topmovie />
+    </div>
+
+
   )
 }
 
