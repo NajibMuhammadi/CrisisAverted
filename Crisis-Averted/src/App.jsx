@@ -1,17 +1,28 @@
 import './app.css'
 import axios from 'axios'
+import TrailerSection from './components/trailer-component/TrailerSection'
 
 const getMovieApi = () => {
-  axios.get(`https://santosnr6.github.io/Data/movies.json`)
+  return axios.get(`https://santosnr6.github.io/Data/movies.json`)
     .then(response => {
-      console.log(response.data)
+      return response.data; // Itt visszaadjuk a filmeket
     })
+    .catch(error => {
+      console.error('Error fetching movies:', error);
+      throw error; // Dobd tovább a hibát, ha valami probléma van a kéréssel
+    });
 }
+
+
 
 function App() {
   getMovieApi()
   return (
-    <h1>App</h1>
+    <div>
+      <h1>App</h1>
+    <TrailerSection />
+    </div>
+    
   )
 }
 
