@@ -1,8 +1,8 @@
-import './topmovie.css';
+import './topMovies.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-function Topmovie() {
+function TopMovies() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -32,5 +32,5 @@ function Topmovie() {
     );
 }
 
-export default Topmovie;
+export default TopMovies;
 

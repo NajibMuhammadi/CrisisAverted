@@ -1,4 +1,3 @@
-import Favorite from '../favotites/Favorite';
 import Logo from '../logo/Logo';
 import SearchInput from '../search/SearchInput';
 import './header.css';
@@ -8,7 +7,6 @@ function Header() {
         <header className="page-header">
             <Logo />
             <SearchInput />
-            <Favorite />
         </header>
     )
 }

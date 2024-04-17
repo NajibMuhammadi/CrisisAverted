@@ -1,9 +1,13 @@
 import './logo.css';
+import LogoImage from '../../assets/logo.png';
+import NavItem from '../navItem/NavItem';
+import { Link } from 'react-router-dom';
 
 function Logo() {
   return (
     <div className='logo'>
-      <img src="./src/logo.png" alt="Logo" />
+      <Link to='/'> <img className='logo__image' src={LogoImage} alt='logo' /> </Link>
+      <NavItem />
     </div>
   )
 }

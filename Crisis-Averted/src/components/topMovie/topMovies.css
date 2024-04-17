@@ -1,12 +1,12 @@
 .content-wrapper {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
 }
 
-.popular__title,
-.popular__card-subtitle {
-    color: white;
+.popular__title {
+    text-align: start;
     margin: 2rem 0;
-    text-align: center;
+    color: white;
 }
 
 .popular__card-container {
@@ -29,6 +29,7 @@
 }
 
 .popular__card-subtitle {
-    margin: 0;
+    color: white;
     padding-bottom: 1rem;
+    font-size: clamp(0.8rem, -0.6211rem + 2.5263vw, 1.4rem);
 }
