@@ -1,6 +1,7 @@
 import './topMovies.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function TopMovies() {
     const [movies, setMovies] = useState([]);
@@ -22,7 +23,11 @@ function TopMovies() {
                 {movies.map(movie => (
                     <div key={movie.imdbid} className='popular__card'>
                         <h2 className='popular__card-subtitle'>{movie.title}</h2>
-                        <img className='popular__card-img' src={movie.poster} alt={movie.title} />
+                        <Link to={`/movie-details/${movie.imdbid}`} className='popular__card-link' >
+                            <img className='popular__card-img' src={movie.poster} alt={movie.title} />
+                        </Link>
+
+
                     </div>
 
                 ))}
