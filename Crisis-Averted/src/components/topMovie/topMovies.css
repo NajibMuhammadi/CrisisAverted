@@ -1,0 +1,35 @@
+.content-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.popular__title {
+    text-align: start;
+    margin: 2rem 0;
+    color: white;
+}
+
+.popular__card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    row-gap: 2rem;
+}
+
+.popular__card {
+    background-color: var(--primary-grey);
+    padding: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.popular__card-img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.popular__card-subtitle {
+    color: white;
+    padding-bottom: 1rem;
+    font-size: clamp(0.8rem, -0.6211rem + 2.5263vw, 1.4rem);
+}
