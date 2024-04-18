@@ -1,5 +1,4 @@
 import './app.css'
-import TrailerSection from './components/trailer-component/TrailerSection'
 import './app.css';
 import Header from './components/header/Header';
 import { Routes, Route } from 'react-router-dom';
@@ -17,7 +16,6 @@ function App() {
   return (
     <div className='app'>
       <Header />
-      <TrailerSection />
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/favoritesPage' element={<FavoritesPage />} />
