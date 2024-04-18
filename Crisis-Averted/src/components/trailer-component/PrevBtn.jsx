@@ -1,8 +1,7 @@
-
-function PrevBtn() {
+const PrevBtn = ({ onClick }) => {
   return (
-    <button className="carousel-btn prev">↤</button>
-  )
-}
+    <button onClick={onClick} className="carousel-btn prev">↤</button>
+  );
+};
 
-export default PrevBtn
+export default PrevBtn;

@@ -1,8 +1,7 @@
-
-function NextBtn() {
+const NextBtn = ({ onClick }) => {
   return (
-    <button className="carousel-btn next">↦</button>
-  )
-}
+    <button onClick={onClick} className="carousel-btn next">↦</button>
+  );
+};
 
-export default NextBtn
+export default NextBtn;
