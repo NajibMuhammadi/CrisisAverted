@@ -1,8 +1,9 @@
+import TrailerSection from '../../components/trailer-component/TrailerSection';
 import './homePage.css';
 
 function HomePage() {
     return (
-        <h1>Home Page</h1>
+        <TrailerSection />
     )
 }
 
