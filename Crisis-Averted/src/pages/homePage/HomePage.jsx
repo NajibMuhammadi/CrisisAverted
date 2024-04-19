@@ -1,4 +1,5 @@
-import TrailerSection from '../../components/trailer-component/TrailerSection';
+
+import TrailerSection from '../../components/trailersection/TrailerSection';
 import './homePage.css';
 
 function HomePage() {

@@ -1,5 +1,6 @@
-import './trailer.css'
-import TrailerArticle from "./TrailerArticle"
+import TrailerArticle from '../trailerarticle/TrailerArticle'
+import './trailer-section.css'
+
 
 function TrailerSection() {
   return (
