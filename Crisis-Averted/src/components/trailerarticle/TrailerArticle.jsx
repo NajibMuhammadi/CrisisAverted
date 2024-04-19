@@ -1,4 +1,5 @@
-import TrailerList from "./TrailerList";
+import TrailerList from "../trailerlist/TrailerList";
+import './trailer-article.css'
 
 function TrailerArticle() {
 

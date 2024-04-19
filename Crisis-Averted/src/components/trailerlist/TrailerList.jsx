@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import PrevBtn from './PrevBtn';
-import NextBtn from './NextBtn';
+import PrevBtn from '../prevbtn/PrevBtn';
+import NextBtn from '../nextbtn/NextBtn';
+import './trailer-list.css'
 
 function TrailerList() {
   const [trailers, setTrailers] = useState([]);

@@ -1,0 +1,9 @@
+.carousel {
+    max-width: 1000px;
+    width: 70%;
+    aspect-ratio: 3 / 2;
+    position: relative;
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 1rem;
+}
