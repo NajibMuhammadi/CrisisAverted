@@ -10,9 +10,14 @@
     border: none;
 }
 
+.search__btn-link {
+    text-decoration: none;
+    color: var(--primary-black);
+    padding: 1rem;
+}
+
 .search__btn {
-    border-radius: 0 2rem 2rem 0;
-    width: 5rem;
     border: none;
     cursor: pointer;
+    border-radius: 0 2rem 2rem 0;
 }
