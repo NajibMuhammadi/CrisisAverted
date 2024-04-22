@@ -20,7 +20,7 @@ function FavoritesPage() {
         }
     }, []);
     const handleClickStar = (movie) => {
-        const updatedFavorites = favorites.filter(favorite => favorite.imdbid !== movie.imdbid || favorite.imdbID !== movie.imdbID);
+        const updatedFavorites = favorites.filter(favorite => favorite.imdbid !== movie.imdbid || favorite.imdbid !== movie.imdbID);
         setFavorites(updatedFavorites);
         localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
         if (updatedFavorites.length === 0) {
@@ -49,7 +49,7 @@ function FavoritesPage() {
                                             &#9733;
                                         </p>
                                     </div>
-                                    <Link to={`/movie-details/${favorite.imdbid}`} className='favorite__card-link' >
+                                    <Link to={`/movie-details/${favorite.imdbid || favorite.imdbID}`} className='favorite__card-link' >
                                         <img className='favorite__card-img' src={favorite.poster || favorite.Poster} alt={favorite.title || favorite.Title} />
                                     </Link>
                                 </div>
