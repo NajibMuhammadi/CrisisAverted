@@ -1,0 +1,31 @@
+.movie__details {
+    background-color: var(--primary-grey);
+    padding: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.movie__text-container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.movie__poster-plot {
+    display: flex;
+}
+
+.movie__plot {
+    padding: 2rem;
+    color: white;
+    white-space: normal;
+}
+
+.movie__actor-title,
+.movie__actor-subtitle {
+    color: white;
+    padding: .3rem;
+}

@@ -15,7 +15,7 @@ function SingleMoviePage() {
                 console.error(error);
             });
 
-    }, []);
+    }, [imdbid]);
     return (
         <div className='movie__details'>
             <div className='movie__text-container'>

@@ -33,3 +33,16 @@
     padding-bottom: 1rem;
     font-size: clamp(0.8rem, -0.6211rem + 2.5263vw, 1.4rem);
 }
+
+/*star*/
+.favorite__card-container {
+    position: relative;
+}
+
+.popular__card-star {
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+    right: 4px;
+    font-size: 40px;
+}

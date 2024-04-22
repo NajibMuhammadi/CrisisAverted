@@ -1,9 +1,19 @@
 import './favoritesPage.css';
 
+
+
 function FavoritesPage() {
+
+
+
+
     return (
-        <h1>FavoritesPage</h1>
+
+        <h1>Favorite page</h1>
+
     )
 }
 
-export default FavoritesPage
+
+
+export default FavoritesPage;
