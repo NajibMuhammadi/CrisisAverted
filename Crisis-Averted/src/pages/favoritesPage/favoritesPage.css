@@ -1,31 +1,59 @@
-.movie__details {
+.content__wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.favorite__page-title {
+    text-align: center;
+    margin: 2rem 0;
+    color: white;
+}
+
+.favorite__card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    row-gap: 2rem;
+}
+
+.favorite__card {
     background-color: var(--primary-grey);
     padding: 1rem;
     white-space: nowrap;
     overflow: hidden;
 }
 
-.movie__text-container {
-    display: flex;
-    justify-content: space-between;
+.favorite__card-img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.favorite__card-subtitle {
     color: white;
-    align-items: center;
     padding-bottom: 1rem;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, -0.6211rem + 2.5263vw, 1.4rem);
 }
 
-.movie__poster-plot {
+.favorite__card-Starcontent {
+    position: relative;
+}
+
+.favorite__card-star {
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+    right: 4px;
+    font-size: 40px;
+}
+
+.not__found {
+    width: 100%;
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.movie__plot {
-    padding: 2rem;
-    color: white;
-    white-space: normal;
-}
-
-.movie__actor-title,
-.movie__actor-subtitle {
-    color: white;
-    padding: .3rem;
+.not__found-text {
+    color: var(--primary-white);
 }

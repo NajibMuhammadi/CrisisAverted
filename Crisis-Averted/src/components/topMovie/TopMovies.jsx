@@ -17,12 +17,22 @@ function TopMovies() {
             });
     }, []);
 
-    const handleClickStar = (imdbid) => {
-        const isFavorite = favorites.includes(imdbid);
+    useEffect(() => {
+        const storedFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        setFavorites(storedFavorites || []);
+    }, []);
+
+    const handleClickStar = (movie) => {
+        const isFavorite = favorites.some(favorite => favorite.imdbid === movie.imdbid);
+
         if (isFavorite) {
-            setFavorites(favorites.filter(id => id !== imdbid));
+            const updatedFavorites = favorites.filter(favorite => favorite.imdbid !== movie.imdbid);
+            setFavorites(updatedFavorites);
+            localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
         } else {
-            setFavorites([...favorites, imdbid]);
+            const updatedFavorites = [...favorites, movie];
+            setFavorites(updatedFavorites);
+            localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
         }
     }
 
@@ -36,7 +46,12 @@ function TopMovies() {
                     <div key={movie.imdbid} className='popular__card'>
                         <h2 className='popular__card-subtitle'>{movie.title}</h2>
                         <div className='favorite__card-container'>
-                            <p onClick={() => handleClickStar(movie.imdbid)} style={{ color: favorites.includes(movie.imdbid) ? 'gold' : 'white' }} className='popular__card-star'>&#9734;</p>
+                            <p
+                                onClick={() => handleClickStar(movie)}
+                                style={{ color: favorites.some(favorite => favorite.title === movie.title) ? 'gold' : 'white' }}
+                                className='popular__card-star'>
+                                &#9733;
+                            </p>
                         </div>
                         <Link to={`/movie-details/${movie.imdbid}`} className='popular__card-link' >
                             <img className='popular__card-img' src={movie.poster} alt={movie.title} />
