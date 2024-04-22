@@ -11,4 +11,4 @@ function NavItem() {
     )
 }
 
-export default NavItem
+export default NavItem;
