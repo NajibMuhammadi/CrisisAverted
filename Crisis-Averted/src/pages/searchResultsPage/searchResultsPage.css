@@ -47,3 +47,15 @@
 .movie__NoFound {
     color: var(--primary-white);
 }
+
+.favorite__card-Starcontent {
+    position: relative;
+}
+
+.favorite__card-star {
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+    right: 4px;
+    font-size: 40px;
+}
