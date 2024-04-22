@@ -18,8 +18,7 @@ function App() {
       <Header setMovies={setMovies} />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/favorite-page' element={<FavoritesPage />} />
-        <Route path='/favorite-page/:imdbid' element={<FavoritesPage />} />
+        <Route path='/favoritesPage' element={<FavoritesPage />} />
         <Route path='/top-imdb' element={<TopMoviesPage />} />
         <Route path='/movie-details/:imdbid' element={<SingleMoviePage />} />
         <Route path='/user-search' element={<SearchResultsPage movies={movies} />} />
