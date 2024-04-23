@@ -21,7 +21,7 @@ function FavoritesPage() {
         }
     }, []);
     const handleClickStar = (movie) => {
-        const updatedFavorites = favorites.filter(favorite => favorite.imdbid !== movie.imdbid || favorite.imdbid !== movie.imdbID);
+        const updatedFavorites = favorites.filter(favorite => favorite.imdbid !== movie.imdbid && favorite.imdbid !== movie.imdbID);
         setFavorites(updatedFavorites);
         localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
         if (updatedFavorites.length === 0) {
@@ -76,7 +76,7 @@ function FavoritesPage() {
                                             onClick={() => handleAddToWatchlist(favorite)}
                                             className='watchlist__btn'
                                         >
-                                        + Watchlist
+                                            + Watchlist
                                         </button>
                                     </div>
                                     <Link to={`/movie-details/${favorite.imdbid || favorite.imdbID}`} className='favorite__card-link' >
