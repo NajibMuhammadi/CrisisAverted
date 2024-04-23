@@ -40,18 +40,18 @@ function TopMovies() {
     useEffect(() => {
         const storedWatchlist = JSON.parse(localStorage.getItem('watchlist') || '[]');
         setWatchlist(storedWatchlist);
-      }, []);
-    
-      const handleAddToWatchlist = (movie) => {
+    }, []);
+
+    const handleAddToWatchlist = (movie) => {
         const isAddedToWatchlist = watchlist.some((item) => item.imdbid === movie.imdbid);
-    
+
         let updatedWatchlist;
         if (isAddedToWatchlist) {
-          updatedWatchlist = watchlist.filter((item) => item.imdbid !== movie.imdbid);
+            updatedWatchlist = watchlist.filter((item) => item.imdbid !== movie.imdbid);
         } else {
-          updatedWatchlist = [...watchlist, movie];
+            updatedWatchlist = [...watchlist, movie];
         }
-    
+
         setWatchlist(updatedWatchlist);
         localStorage.setItem('watchlist', JSON.stringify(updatedWatchlist));
     }
@@ -76,7 +76,7 @@ function TopMovies() {
                                 onClick={() => handleAddToWatchlist(movie)}
                                 className='watchlist__btn'
                             >
-                            + Watchlist
+                                + Watchlist
                             </button>
                         </div>
                         <Link to={`/movie-details/${movie.imdbid}`} className='popular__card-link' >
