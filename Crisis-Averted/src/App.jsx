@@ -9,6 +9,7 @@ import FavoritesPage from './pages/favoritesPage/FavoritesPage';
 import TopMoviesPage from './components/topMovie/TopMovies';
 import SingleMoviePage from './pages/singleMoviePage/SingleMoviePage';
 import SearchResultsPage from './pages/searchResultsPage/SearchResultsPage';
+import WatchlistPage from './pages/watchlistPage/WatchlistPage';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path='/top-imdb' element={<TopMoviesPage />} />
         <Route path='/movie-details/:imdbid' element={<SingleMoviePage />} />
         <Route path='/user-search' element={<SearchResultsPage movies={movies} />} />
-
+        <Route path='/watchlistPage' element={<WatchlistPage />} />        
       </Routes>
     </div>
 

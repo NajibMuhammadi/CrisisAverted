@@ -1,0 +1,59 @@
+.content__wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.watchlist__page-title {
+    text-align: center;
+    margin: 2rem 0;
+    color: white;
+}
+
+.watchlist__card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    row-gap: 2rem;
+}
+
+.watchlist__card {
+    background-color: var(--primary-grey);
+    padding: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.watchlist__card-img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.watchlist__card-subtitle {
+    color: white;
+    padding-bottom: 1rem;
+    font-size: clamp(0.8rem, -0.6211rem + 2.5263vw, 1.4rem);
+}
+
+.watchlist__card-Starcontent {
+    position: relative;
+}
+
+.watchlist__card-star {
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+    right: 4px;
+    font-size: 40px;
+}
+
+.not__found {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not__found-text {
+    color: var(--primary-white);
+}
