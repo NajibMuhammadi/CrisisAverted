@@ -21,7 +21,7 @@ function FavoritesPage() {
         }
     }, []);
     const handleClickStar = (movie) => {
-        const updatedFavorites = favorites.filter(favorite => favorite.imdbid !== movie.imdbid && favorite.imdbid !== movie.imdbID);
+        const updatedFavorites = favorites.filter(favorite => favorite.imdbid !== movie.imdbid);
         setFavorites(updatedFavorites);
         localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
         if (updatedFavorites.length === 0) {
