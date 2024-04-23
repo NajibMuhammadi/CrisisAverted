@@ -34,22 +34,22 @@ function WatchlistPage() {
 
     useEffect(() => {
         const storedFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-        setFavorites(storedFavorites);
+        setFavorites(storedFavorites || []);
     }, []);
 
     const handleClickStar = (movie) => {
-        const isFavorite = favorites.some((favorite) => favorite.imdbID === movie.imdbID);
+        const isFavorite = favorites.some(favorite => favorite.imdbid === movie.imdbid);
 
-        let updatedFavorites;
         if (isFavorite) {
-            updatedFavorites = favorites.filter((favorite) => favorite.imdbID !== movie.imdbID);
+            const updatedFavorites = favorites.filter(favorite => favorite.imdbid !== movie.imdbid);
+            setFavorites(updatedFavorites);
+            localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
         } else {
-            updatedFavorites = [...favorites, movie];
+            const updatedFavorites = [...favorites, movie];
+            setFavorites(updatedFavorites);
+            localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
         }
-
-        setFavorites(updatedFavorites);
-        localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-    };
+    }
 
     return (
         <div>
@@ -67,7 +67,7 @@ function WatchlistPage() {
                                 <div className="watchlist__card-Starcontent">
                                     <p
                                         onClick={() => handleClickStar(movie)}
-                                        style={{ color: favorites.some((favorite) => favorite.imdbID === movie.imdbID) ? 'gold' : 'white' }}
+                                        style={{ color: favorites.some(favorite => favorite.title === movie.title) ? 'gold' : 'white' }}
                                         className='popular__card-star'>
                                         &#9733;
                                     </p>
