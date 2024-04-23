@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function TopMovies() {
     const [movies, setMovies] = useState([]);
     const [favorites, setFavorites] = useState([]);
+    const [watchlist, setWatchlist] = useState([]);
 
     useEffect(() => {
         axios.get(`https://santosnr6.github.io/Data/movies.json`)
@@ -36,6 +37,25 @@ function TopMovies() {
         }
     }
 
+    useEffect(() => {
+        const storedWatchlist = JSON.parse(localStorage.getItem('watchlist') || '[]');
+        setWatchlist(storedWatchlist);
+      }, []);
+    
+      const handleAddToWatchlist = (movie) => {
+        const isAddedToWatchlist = watchlist.some((item) => item.imdbid === movie.imdbid);
+    
+        let updatedWatchlist;
+        if (isAddedToWatchlist) {
+          updatedWatchlist = watchlist.filter((item) => item.imdbid !== movie.imdbid);
+        } else {
+          updatedWatchlist = [...watchlist, movie];
+        }
+    
+        setWatchlist(updatedWatchlist);
+        localStorage.setItem('watchlist', JSON.stringify(updatedWatchlist));
+    }
+
 
 
     return (
@@ -52,6 +72,12 @@ function TopMovies() {
                                 className='popular__card-star'>
                                 &#9733;
                             </p>
+                            <button
+                                onClick={() => handleAddToWatchlist(movie)}
+                                className='watchlist__btn'
+                            >
+                            + Watchlist
+                            </button>
                         </div>
                         <Link to={`/movie-details/${movie.imdbid}`} className='popular__card-link' >
                             <img className='popular__card-img' src={movie.poster} alt={movie.title} />
