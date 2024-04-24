@@ -1,0 +1,8 @@
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-grey);
+    width: 100%;
+    padding: 1rem 1.5rem;
+}

@@ -1,0 +1,26 @@
+.carousel-btn {
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #f5c518;
+    background: none;
+    border: none;
+    z-index: 1;
+    transition: 0.2s;
+ }
+ 
+ .carousel-btn:hover {
+     color: #ffffff;
+ }
+ .carousel-btn:active {  
+     font-size: 5rem;
+ }
+ 
+ .carousel-btn.prev {
+     left: 1rem;
+ }
+ .carousel-btn.prev:hover {
+     left: 0.75rem;
+ }

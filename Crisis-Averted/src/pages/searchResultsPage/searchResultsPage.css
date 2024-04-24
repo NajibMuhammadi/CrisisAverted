@@ -1,0 +1,61 @@
+.movie__found-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.results__title {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.results__info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    row-gap: 2rem;
+}
+
+.search__card {
+    background-color: var(--primary-grey);
+    padding: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.search__card-subtitle {
+    color: white;
+    padding-bottom: 1rem;
+    font-size: clamp(0.8rem, -0.6211rem + 2.5263vw, 1.4rem);
+    text-align: center;
+}
+
+.search__img {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.movie__error {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie__NoFound {
+    color: var(--primary-white);
+}
+
+.favorite__card-Starcontent {
+    position: relative;
+}
+
+.favorite__card-star {
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+    right: 4px;
+    font-size: 40px;
+}
