@@ -66,7 +66,7 @@ function SearchResultsPage({ movies }) {
                                         onClick={() => handleAddToWatchlist(movie)}
                                         className='watchlist__btn'
                                     >
-                                    + Watchlist
+                                        + Watchlist
                                     </button>
                                 </div>
                                 <Link to={`/movie-details/${movie.imdbID}`} className='search__card-link' >
